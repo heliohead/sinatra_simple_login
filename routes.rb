@@ -16,7 +16,7 @@ module App
       if session[:return_to].nil?
         redirect '/'
       else
-        redirect session[:return_to]
+        redirect '/protected'
       end
     end
 

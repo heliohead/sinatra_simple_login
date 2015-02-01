@@ -33,9 +33,12 @@ module App
         if user.nil?
           fail!("The email you entered does not exist.")
           flash.error = ""
-        elsif user.authenticate(params['user']['password'])
+        elsif user.authenticate(params['user']['password']) && !user.blocked_user?
+          user.update(:failed_login_attempts => 0)
           success!(user)
         else
+          user.adjust!(:failed_login_attempts => 1)
+          user.update(:blocked_user => true) if user.failed_login_attempts >= 4
           fail!("Could not log in")
         end
       end
