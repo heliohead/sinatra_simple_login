@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sinatra Simple Login</title>
+
+    <style>
+    body {
+      margin: 10px auto;
+      width: 800px;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Sinatra Simple Login</h1>
+
+    <p><a href="/login">Log In</a> | <a href="/protected">Protected Page</a> | <a href="/logout">Log Out</a></p>
+
+    <%= yield %>
+
+  </body>
+</html>
