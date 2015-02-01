@@ -17,6 +17,8 @@ GEM
       dm-validations (~> 1.2.0)
     data_objects (0.10.14)
       addressable (~> 2.1)
+    dm-adjust (1.2.0)
+      dm-core (~> 1.2.0)
     dm-aggregates (1.2.0)
       dm-core (~> 1.2.0)
     dm-constraints (1.2.0)
@@ -58,6 +60,9 @@ GEM
     json_pure (1.8.2)
     multi_json (1.10.1)
     rack (1.6.0)
+    rack-flash3 (1.0.1)
+      rack
+      rack
     rack-protection (1.5.3)
       rack
     sinatra (1.4.5)
@@ -75,6 +80,8 @@ PLATFORMS
 
 DEPENDENCIES
   data_mapper
+  dm-adjust
   dm-sqlite-adapter
+  rack-flash3 (= 1.0.1)
   sinatra
   warden
