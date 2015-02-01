@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
     <title>Sinatra Simple Login</title>
 
     <style>
@@ -15,7 +16,9 @@
 
     <p><a href="/login">Log In</a> | <a href="/protected">Protected Page</a> | <a href="/logout">Log Out</a></p>
 
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
 
   </body>
 </html>
