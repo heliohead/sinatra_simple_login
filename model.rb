@@ -7,3 +7,6 @@ class User
   property :email, String
   property :password, String
 end
+
+DataMapper.finalize
+DataMapper.auto_upgrade!
