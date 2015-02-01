@@ -1,0 +1,14 @@
+# Ignore bundler config.
+/.bundle
+.DS_Store
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/*sqlite
+
+# Ignore all logfiles and tempfiles.
+/log/*
+!/log/.keep
+/tmp
+/Gemfile.lock
+
