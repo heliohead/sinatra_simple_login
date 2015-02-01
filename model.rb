@@ -10,3 +10,9 @@ end
 
 DataMapper.finalize
 DataMapper.auto_upgrade!
+
+if User.count == 0
+  @user = User.create(email: "foo@foo.com")
+  @user.password = "123"
+  @user.save
+end
