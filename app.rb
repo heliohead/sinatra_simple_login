@@ -1,20 +1,8 @@
 require 'bundler'
 Bundler.require
 
+use Rack::Session::Cookie, secret: "UnSecretKey"
+use Rack::Flash, accessorize: [:error, :success]
+
 require './model'
-
-get '/' do
-  erb :index
-end
-
-get '/login' do
-  erb :login
-end
-
-get '/logout' do
-  redirect '/'
-end
-
-get '/protected' do
-  erb :protected
-end
+require './routes'
